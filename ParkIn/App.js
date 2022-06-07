@@ -2,15 +2,29 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Form from './components/Form';
-import Location from'./components/Location';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
 export default function App() {
+  const addImage=()=>{
+    launchImageLibrary('photo', callback)
+    const result = await launchImageLibrary('photo');
+  }
+  
   return (
+  
     <View style={styles.container}>
+       <View>
        <Form />
-       <Location />
-
+       </View>
+       <View>
+         <TouchableOpacity style={styles.button} onPress={addImage()}>
+           <Text style={styles.btntext}> ADD IMAGE</Text>
+         </TouchableOpacity>
+       </View>
+       
     </View>
+
+    
    
     
   );
@@ -24,4 +38,18 @@ const styles = StyleSheet.create({
     paddingLeft:60,
     paddingRight: 60,
   },
+  btntext: {
+    fontWeight: 'bold',
+    backgroundColor: '#fff',
+    padding: 15,
+    color: '#006400',
+  },
+  button: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    padding: 20,
+    borderColor: '#f8f8f8',
+    borderWeight: 5,
+    marginTop: 30,
+  }
 });
