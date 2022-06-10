@@ -1,14 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Form from './components/Form';
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+
 
 export default function App() {
-  const addImage=()=>{
-    launchImageLibrary('photo', callback)
-    const result = await launchImageLibrary('photo');
-  }
+
   
   return (
   
@@ -16,11 +13,7 @@ export default function App() {
        <View>
        <Form />
        </View>
-       <View>
-         <TouchableOpacity style={styles.button} onPress={addImage()}>
-           <Text style={styles.btntext}> ADD IMAGE</Text>
-         </TouchableOpacity>
-       </View>
+       
        
     </View>
 
