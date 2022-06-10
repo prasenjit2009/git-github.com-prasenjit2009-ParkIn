@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
 
+
 export default function Form() {
   const [userName, setUserName] = useState("")
   
@@ -11,9 +12,7 @@ export default function Form() {
        <Text style={styles.header}>Registration</Text>
        <TextInput onChangeText={(text) => setUserName(text)} style={styles.UserName} placeholder="User Name" underlineColorAndroid={'transparent'} />
        <TextInput style={styles.UserName} placeholder="Description" underlineColorAndroid={'transparent'} />
-       <TouchableOpacity onChangeText={(text) => setDesc(text)} style={styles.button}>
-         <Text style={styles.btntext}>ADD IMAGE</Text>
-       </TouchableOpacity>
+       
        <TouchableOpacity style={styles.button}>
          <Text style={styles.btntext}>ADD LOCATION</Text>
        </TouchableOpacity>

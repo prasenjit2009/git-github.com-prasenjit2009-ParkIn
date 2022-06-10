@@ -1,8 +1,17 @@
 import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+  Image,
+  Button,
+  Dimensions,
+  TouchableOpacity } from 'react-native';
 import Form from './components/Form';
-
+import chooseImage from './components/imaging';
 
 export default function App() {
 
@@ -12,6 +21,9 @@ export default function App() {
     <View style={styles.container}>
        <View>
        <Form />
+       </View>
+       <View>
+        <chooseImage/>
        </View>
        
        
