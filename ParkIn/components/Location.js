@@ -104,3 +104,8 @@ const styles = StyleSheet.create({
 });
 
 export default Location;
+
+
+<TouchableOpacity value ={userName} style={styles.button}>
+         <Text style={styles.btntext}>SUBMIT</Text>
+       </TouchableOpacity>
