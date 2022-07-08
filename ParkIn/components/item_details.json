@@ -1,0 +1,10 @@
+[
+    {
+        "name": "user_name",
+        "address": "park_adress",
+        "description": "park_desc",
+        "location": [0,0],
+        "type": "free_or_paid",
+        "image": "file_name_display"
+    }
+]
